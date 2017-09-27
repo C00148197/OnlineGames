@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" href="../../../lib/css/lab.css" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Lab 1</title>
+
+</head>
+
+<body>
+<h1>Lab 1 </h1>
+<p>Goal: Get started with communication using UDP with Winsock in C++</p>
+<p><strong>Learning outcomes: </strong></p>
+<ul>
+  <li>Setup Winsock in C++</li>
+  <li>Setup sockets</li>
+  <li>Send and receive data</li>
+  <li>Make a simple turn based game over UDP   </li>
+</ul>
+<p>&nbsp;</p>
+<h2>Introduction</h2>
+<p>Today's lab will be done in <strong>pairs</strong>. In pair programming, two programmers share one computer. One is the &quot;driver,&quot; who controls the keyboard and mouse. The other is the &quot;navigator,&quot; who observes, asks questions, suggests solutions, and thinks about slightly longer-term strategies. [<a href="http://www.ics.uci.edu/~kay/courses/i41/hw/pair.html">1</a>]</p>
+<p>The two programmers frequently switch roles &mdash;about every 15 minutes (but that's flexible).</p>
+<p>Pair up with someone and both move to the same computer. &nbsp; </p>
+<h2><strong>github</strong></h2>
+<p>Setup an Online Gaming directory, and create a repo with </p>
+<p>git init </p>
+<p>Create a lab 1 directory </p>
+<p>Remember to commit frequently and push to github. </p>
+<h2><strong>Compiler Setup</strong></h2>
+<p> In Visual Studio<br />
+In  Project-&gt;Properties-&gt;Configuration Properties-&gt;Linker-&gt;Input you  should find a field called &ldquo;Additional Dependencies&rdquo;. In this field, at the  line &ldquo;ws2_32.lib&rdquo;. </p>
+<h2>Incorporate the Net class into your project </h2>
+<p>Incorporate the provided <a href="./Net">Net class</a>. This encapsulates the lower level Winsock code to do the following:</p>
+<ul>
+  <li>initialise winsock </li>
+  <li>setup a socket and bind it to a port you provide </li>
+  <li>received data coming in on the socket </li>
+  <li>send data to an ip and port you provide</li>
+  <li>and more...! <br /></li>
+</ul>
+<h2>Setup</h2>
+<p>Create a Win32 console application <br />
+In application settings, click empty project (NOT precompiled header) </p>
+<p>Create a Main.cpp file. </p>
+<p>#include &lt;winsock2.h&gt; at the top of  your code. </p>
+<p>In the main() function, </p>
+<ul>
+  <li>Create an instance of the Net class. </li>
+  <li>Comment out the references to the Log class (we won't be using this today) </li>
+  <li>Call initialise on it to <strong>initialise winsock.</strong></li>
+  <li>Then, take input from the user.
+    <ul>
+      <li>If user presses 'a', call a function playerA()</li>
+      <li>If user presses 'b', call a function playerB()</li>
+      <li>[You could use cin &gt;&gt; a; for this where a is true if it's player a and false otherwise] <br />
+      </li>
+    </ul>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<h2>Player A</h2>
+<p>Setup Player A's net object by calling setupUDP.</p>
+<p>Set it the <strong>socket </strong>and <strong>bind </strong>it to port <strong>28000</strong> and ip address <strong>127.0.0.1</strong></p>
+<p>Make it output to the console the port and ip address to the console. </p>
+<h2> Player B</h2>
+<p>Setup Player B's net object by calling setupUDP</p>
+<p>Set it the <strong>socket </strong>and <strong>bind </strong>it to port <strong>28001</strong> and ip address <strong>127.0.0.1</strong></p>
+<p>Make it  output to the console the port and ip address to the console. </p>
+<h2>Test!</h2>
+<p>To make sure everything is going okay so far, run <strong>two </strong>instances of your project. (Do this by pressing Ctrl + F5 twice).</p>
+<p>For the first instance, press 'a', and for the second press 'b'.  Each console should display the correct ip address and port. </p>
+<p>&nbsp;</p>
+<h2>Set up a communication  loop</h2>
+<p>So far the highlighted parts of the loop have been completed. </p>
+<table width="427" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>A</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td width="215" bgcolor="#FFFFCC">setup socket </td>
+    <td width="206" bgcolor="#FFFFCC">setup socket </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFCC">bind</td>
+    <td bgcolor="#FFFFCC">bind</td>
+  </tr>
+  <tr>
+    <td>read message from player A </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>send message </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>receive message (if one came in) and output it to console </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h2>Send a message!</h2>
+<p>Use net.sendData(ip,port,msgSent);</p>
+<p>to send a message from A to B. </p>
+<h2>Read to receive a message</h2>
+<p>Use</p>
+<p>char message[200]=&quot;&quot;;</p>
+<p>net.receiveData(message); </p>
+<p>if a message is received it is copied into the char array <strong>message.</strong> </p>
+<p>Output it to the console. </p>
+<p>Also output where the message came from using the relevant method in Net. </p>
+<h2>Test again!</h2>
+<p>Again run <strong>two </strong>instances of your project. (Do this by pressing Ctrl + F5 twice).</p>
+<p>For the first instance, press 'a', and for the second press 'b'.  Each console should display the correct ip address and port. </p>
+<p>If you've done it right the message from a should appear on b's console.</p>
+<h2>Over the network </h2>
+<p>Now find your ip addresses and replace the 127.0.0.1 </p>
+<h2>A simple turn based game </h2>
+<p>Implement a simple game (e.g. higher and lower)</p>
+<p>Bonus for more interesting game than higher and lower (for example, <a href="http://en.wikipedia.org/wiki/Liar's_dice">Liar's Dice</a>) </p>
+<p>&nbsp;</p>
+</body>
+</html>
