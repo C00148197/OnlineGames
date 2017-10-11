@@ -1,3 +1,4 @@
-﻿  Source.cpp
-  Project1.vcxproj -> C:\Users\gameuser\Desktop\Games Engi\Project1\Debug\Project1.exe
-  Project1.vcxproj -> C:\Users\gameuser\Desktop\Games Engi\Project1\Debug\Project1.pdb (Partial PDB)
+﻿  Net.cpp
+c:\users\gameuser\desktop\onlinedev\labs\lab1\project1\net.cpp(229): warning C4101: 'bytes_sent': unreferenced local variable
+  Project1.vcxproj -> C:\Users\gameuser\Desktop\OnlineDev\Labs\Lab1\Debug\Project1.exe
+  Project1.vcxproj -> C:\Users\gameuser\Desktop\OnlineDev\Labs\Lab1\Debug\Project1.pdb (Partial PDB)

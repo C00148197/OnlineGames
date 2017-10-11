@@ -1,0 +1,6 @@
+﻿  TcpListener.cpp
+c:\users\gameuser\desktop\onlinedev\lab2\lab2\tcplistener.cpp(49): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\winsock2.h(1830): note: see declaration of 'inet_addr'
+c:\users\gameuser\desktop\onlinedev\lab2\lab2\tcplistener.cpp(159): warning C4018: '<': signed/unsigned mismatch
+  Lab2.vcxproj -> C:\Users\gameuser\Desktop\OnlineDev\Lab2\Debug\Lab2.exe
+  Lab2.vcxproj -> C:\Users\gameuser\Desktop\OnlineDev\Lab2\Debug\Lab2.pdb (Partial PDB)
