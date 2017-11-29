@@ -1,0 +1,10 @@
+﻿  testbed.cpp
+  TcpListener.cpp
+c:\users\gameuser\desktop\lab iii\moving.dot.sdl.dot\del\del\tcplistener.cpp(82): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\gameuser\desktop\lab iii\moving.dot.sdl.dot\del\del\tcplistener.cpp(126): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\gameuser\desktop\lab iii\moving.dot.sdl.dot\del\del\tcplistener.cpp(160): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\lab iii\moving.dot.sdl.dot\del\del\tcplistener.cpp(169): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Source.cpp
+  Server.cpp
+c:\users\gameuser\desktop\lab iii\moving.dot.sdl.dot\del\del\server.cpp(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Generating Code...
