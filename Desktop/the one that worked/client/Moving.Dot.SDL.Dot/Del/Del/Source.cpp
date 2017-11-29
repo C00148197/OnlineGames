@@ -648,7 +648,7 @@ int main(int argc, char* args[])
 
 			if (bytesReceived > 0)
 			{
-				cout << "server> " << string(buf, 0, bytesReceived) << endl;
+			//	cout << "server> " << string(buf, 0, bytesReceived) << endl;
 				userInput = string(buf, 0, bytesReceived);
 			}
 
@@ -690,6 +690,8 @@ int main(int argc, char* args[])
 		while (to_string(10) != "Det's mom")
 		{
 
+//			cout << clientID << endl;
+
 
 			while (SDL_PollEvent(&e) != 0)
 			{
@@ -717,6 +719,11 @@ int main(int argc, char* args[])
 				}
 			}
 
+			if (userInput == "")
+			{
+				userInput = "init";
+			}
+
 			if (userInput.size() > 0)
 			{
 
@@ -732,11 +739,20 @@ int main(int argc, char* args[])
 
 					if (bytesReceived > 0)
 					{
-						cout << "server> " << string(buf, 0, bytesReceived) << endl;
+						//cout << "server> " << string(buf, 0, bytesReceived) << endl;
 						userInput = string(buf, 0, bytesReceived);
 					}
 
+					cout << userInput << endl;
 
+					if (userInput == "1")
+					{
+						noPlayers = 1;
+					}
+					if (userInput == "2")
+					{
+						noPlayers = 2;
+					}
 
 
 					if (userInput == "x50")
@@ -745,7 +761,7 @@ int main(int argc, char* args[])
 						//moveA = true;
 					//	
 						moveARight = true;
-						dotA.mPosX += 5;
+					//	dotA.mPosX += 5;
 
 					}
 
@@ -754,7 +770,7 @@ int main(int argc, char* args[])
 						//	moveB = true;
 						cout << "move loogee" << endl;
 						moveBRight = true;
-						dotB.mPosX += 5;
+					//	dotB.mPosX += 5;
 
 					}
 
@@ -768,21 +784,23 @@ int main(int argc, char* args[])
 			}
 
 
-		/*	if (noPlayers > 1)
+			if (noPlayers > 1)
 			{
-
+				
 
 				if (moveARight == true)
 				{
 					dotA.mPosX += 5;
+					moveARight = false;
 				}
 
 				if (moveBRight == true)
 				{
 					dotB.mPosX += 5;
+					moveBRight = false;
 				}
 
-			}*/
+			}
 
 			SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 			SDL_RenderClear(gRenderer);

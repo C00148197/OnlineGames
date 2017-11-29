@@ -3,10 +3,10 @@ c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(69): war
 c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(82): warning C4018: '<': signed/unsigned mismatch
 c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(103): warning C4018: '<': signed/unsigned mismatch
 c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(113): warning C4018: '<': signed/unsigned mismatch
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(162): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(154): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(164): warning C4018: '<': signed/unsigned mismatch
 c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(175): warning C4018: '<': signed/unsigned mismatch
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(186): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(179): warning C4018: '<': signed/unsigned mismatch
 c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(190): warning C4018: '<': signed/unsigned mismatch
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(201): warning C4018: '<': signed/unsigned mismatch
   Del.vcxproj -> C:\Users\gameuser\Desktop\the one that worked\server\Del\Debug\Del.exe
   Del.vcxproj -> C:\Users\gameuser\Desktop\the one that worked\server\Del\Debug\Del.pdb (Partial PDB)

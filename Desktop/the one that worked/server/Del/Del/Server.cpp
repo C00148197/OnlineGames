@@ -141,16 +141,8 @@ int main(int argc, char ** argv)
 
 						if (token == "0 MOVELEFT")
 						{
-							////moveleft
-							//if (returnId == 0)
-							//{
-								std::cout << "It a me gren maro" << std::endl;
-						////	}
-						//	else if (returnId == 1)
-						//	{
-					
-						//	}
-								daddyString = "x50";
+							std::cout << "It a me gren maro" << std::endl;
+							daddyString = "x50";
 						}
 
 						if (token == "1 MOVELEFT")
@@ -161,21 +153,18 @@ int main(int argc, char ** argv)
 
 						for (int k = 0; k < socketvector.size(); k++)
 						{
-							if (socketvector[k].id == tmpvar)
-							{
-						/*		std::string tempboi = "grenboi";
-								tempboi.c_str();*/
-								
+						/*	if (socketvector[k].id == tmpvar)
+							{	*/
 								SDLNet_TCP_Send(socketvector[k].socket, daddyString.c_str(), strlen(tmp) + 1);
-								break;
-							}
+							//	break;
+					//		}
 						}
 					}
 
 					for (int k = 0; k < socketvector.size(); k++)
 					{ 
-						SDLNet_TCP_Send(socketvector[k].socket, "nadda", strlen(tmp) + 1);
-						std::cout << "IVA BUFFS CONFIRMED" << std::endl;
+						SDLNet_TCP_Send(socketvector[k].socket, std::to_string(playernum).c_str(), strlen(tmp) + 1);
+				//		std::cout << "IVA BUFFS CONFIRMED" << std::endl;
 					}
 
 
