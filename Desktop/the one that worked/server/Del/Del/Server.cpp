@@ -60,9 +60,15 @@ int main(int argc, char ** argv)
 
 				std::string returnIdStr = std::to_string(returnId); //return 0 if first conn
 
+				std::string stringy = returnIdStr + std::to_string(playernum);
+
+
+				auto jimmy = stringy.c_str();
+
+
 				for (int k = 0; k < socketvector.size(); k++)
 				{
-					SDLNet_TCP_Send(socketvector[k].socket, returnIdStr.c_str(), strlen(tmp) + 1);
+					SDLNet_TCP_Send(socketvector[k].socket, jimmy, strlen(tmp) + 1);
 				}
 			}
 			else {
@@ -90,6 +96,7 @@ int main(int argc, char ** argv)
 						j++;
 					}
 
+			
 					if (num == 1)
 					{
 						std::cout << "Message Type 1: " << socketvector[i].id << '\n';
@@ -164,6 +171,14 @@ int main(int argc, char ** argv)
 							}
 						}
 					}
+
+					for (int k = 0; k < socketvector.size(); k++)
+					{ 
+						SDLNet_TCP_Send(socketvector[k].socket, "nadda", strlen(tmp) + 1);
+						std::cout << "IVA BUFFS CONFIRMED" << std::endl;
+					}
+
+
 				}
 			}
 		}

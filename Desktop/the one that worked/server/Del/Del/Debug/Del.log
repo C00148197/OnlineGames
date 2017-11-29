@@ -1,11 +1,12 @@
 ﻿  Server.cpp
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(63): warning C4018: '<': signed/unsigned mismatch
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(76): warning C4018: '<': signed/unsigned mismatch
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(96): warning C4018: '<': signed/unsigned mismatch
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(106): warning C4018: '<': signed/unsigned mismatch
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(155): warning C4018: '<': signed/unsigned mismatch
-c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(171): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(69): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(82): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(103): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(113): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(162): warning C4018: '<': signed/unsigned mismatch
 c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(175): warning C4018: '<': signed/unsigned mismatch
 c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(186): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(190): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\the one that worked\server\del\del\server.cpp(201): warning C4018: '<': signed/unsigned mismatch
   Del.vcxproj -> C:\Users\gameuser\Desktop\the one that worked\server\Del\Debug\Del.exe
   Del.vcxproj -> C:\Users\gameuser\Desktop\the one that worked\server\Del\Debug\Del.pdb (Partial PDB)

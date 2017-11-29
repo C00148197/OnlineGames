@@ -652,23 +652,35 @@ int main(int argc, char* args[])
 				userInput = string(buf, 0, bytesReceived);
 			}
 
-			clientID = std::stoi(userInput);
+			if (userInput != "" && userInput != "000")
+			{
 
 
-			//std::string token = userInput;
+			
 
-			//token.erase(0, 1); //this is our message pass.
 
-			//noPlayers = std::stoi(token);
+				std::string token = userInput;
 
-			/*	if (noPlayers > 1)
-				{
-					multiplayer = true;
+				token.erase(0, 1); //this is our message pass.
 
-					cout << "we're free" << endl;
-				}
+				noPlayers = std::stoi(token);
 
-			}*/
+				/*	if (noPlayers > 1)
+					{
+						multiplayer = true;
+
+						cout << "we're free" << endl;
+					}
+
+				}*/
+				token = userInput;
+
+				token.erase(1, 1); //this is our message pass.
+
+				clientID = std::stoi(token);
+
+
+			}
 		}
 		userInput = "";
 
