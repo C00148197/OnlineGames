@@ -28,7 +28,6 @@ bool moveBRight = false;
 
 SDL_Event e;
 
-
 bool multiplayer = false;
 
 //Texture wrapper class
@@ -665,19 +664,11 @@ int main(int argc, char* args[])
 
 				noPlayers = std::stoi(token);
 
-				/*	if (noPlayers > 1)
-					{
-						multiplayer = true;
-
-						cout << "we're free" << endl;
-					}
-
-				}*/
 				token = userInput;
 
 				token.erase(1, 1); //this is our message pass.
 
-				clientID = std::stoi(token);
+				clientID = std::stoi(token); //set ids and playernums
 
 
 			}
@@ -689,9 +680,6 @@ int main(int argc, char* args[])
 
 		while (to_string(10) != "Det's mom")
 		{
-
-//			cout << clientID << endl;
-
 
 			while (SDL_PollEvent(&e) != 0)
 			{
@@ -724,8 +712,13 @@ int main(int argc, char* args[])
 				userInput = "init";
 			}
 
-			if (userInput.size() > 0)
+			if (userInput.size() > 0) //if there is input
 			{
+
+		/*		if (userInput == "3 1 MOVELEFT")
+				{
+					cout << "" << endl;
+				}*/
 
 				int sendResult = send(sock, userInput.c_str(), userInput.size() + 1, 0);
 
@@ -739,13 +732,10 @@ int main(int argc, char* args[])
 
 					if (bytesReceived > 0)
 					{
-						//cout << "server> " << string(buf, 0, bytesReceived) << endl;
 						userInput = string(buf, 0, bytesReceived);
 					}
 
-					cout << userInput << endl;
-
-					if (userInput == "1")
+					if (userInput == "1") //update numplayers in default cases
 					{
 						noPlayers = 1;
 					}
@@ -755,47 +745,33 @@ int main(int argc, char* args[])
 					}
 
 
-					if (userInput == "x50")
+					if (userInput == "x50") //player 1 wants to move
 					{
-						cout << "move maro" << endl;
-						//moveA = true;
-					//	
 						moveARight = true;
-					//	dotA.mPosX += 5;
 
 					}
 
-					else if (userInput == "x51")
+					else if (userInput == "x51") //player 2 wants to move
 					{
-						//	moveB = true;
-						cout << "move loogee" << endl;
 						moveBRight = true;
-					//	dotB.mPosX += 5;
-
 					}
-
-					/*	if (clientID == 1 && )
-						{
-							dotA.mPosX += 5;
-							dotB.mPosX += 5;
-						}*/
 
 				}
 			}
 
 
-			if (noPlayers > 1)
+			if (noPlayers > 1) //if there are multiple players, handle their requests
 			{
-				
-
 				if (moveARight == true)
 				{
+					cout << "A move" << endl;
 					dotA.mPosX += 5;
 					moveARight = false;
 				}
 
 				if (moveBRight == true)
 				{
+					cout << "B move" << endl;
 					dotB.mPosX += 5;
 					moveBRight = false;
 				}

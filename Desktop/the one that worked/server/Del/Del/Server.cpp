@@ -141,13 +141,13 @@ int main(int argc, char ** argv)
 
 						if (token == "0 MOVELEFT")
 						{
-							std::cout << "It a me gren maro" << std::endl;
+							std::cout << "A moves" << std::endl;
 							daddyString = "x50";
 						}
 
 						if (token == "1 MOVELEFT")
 						{
-							std::cout << "It him red loogee" << std::endl;
+							std::cout << "B move" << std::endl;
 							daddyString = "x51";
 						}
 
